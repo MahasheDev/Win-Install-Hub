@@ -1,0 +1,121 @@
+{
+ "version": "auto-py-to-exe-configuration_v1",
+ "pyinstallerOptions": [
+  {
+   "optionDest": "noconfirm",
+   "value": true
+  },
+  {
+   "optionDest": "filenames",
+   "value": "W:/_\u041f\u0440\u043e\u0435\u043a\u0442\u044b/Python/Windows_Components_Installer/menu.py"
+  },
+  {
+   "optionDest": "onefile",
+   "value": true
+  },
+  {
+   "optionDest": "console",
+   "value": false
+  },
+  {
+   "optionDest": "icon_file",
+   "value": "W:/_\u041f\u0440\u043e\u0435\u043a\u0442\u044b/Python/Windows_Components_Installer/Source/Image/icon.ico"
+  },
+  {
+   "optionDest": "name",
+   "value": "WCI By Mahashe"
+  },
+  {
+   "optionDest": "clean_build",
+   "value": false
+  },
+  {
+   "optionDest": "strip",
+   "value": false
+  },
+  {
+   "optionDest": "noupx",
+   "value": false
+  },
+  {
+   "optionDest": "disable_windowed_traceback",
+   "value": false
+  },
+  {
+   "optionDest": "uac_admin",
+   "value": true
+  },
+  {
+   "optionDest": "uac_uiaccess",
+   "value": false
+  },
+  {
+   "optionDest": "argv_emulation",
+   "value": false
+  },
+  {
+   "optionDest": "bootloader_ignore_signals",
+   "value": false
+  },
+  {
+   "optionDest": "datas",
+   "value": "W:/_\u041f\u0440\u043e\u0435\u043a\u0442\u044b/Python/Windows_Components_Installer/Source/Python-Modules.txt;Source/"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "json"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "customtkinter"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "requests"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "datetime"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "os"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "sys"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "ctypes"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "threading"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "subprocess"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "shutil"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "time"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "zipfile"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "re"
+  }
+ ],
+ "nonPyinstallerOptions": {
+  "increaseRecursionLimit": true,
+  "manualArguments": ""
+ }
+}

@@ -1,0 +1,25 @@
+@echo off
+setlocal
+set "NameApp=Win Install Hub"
+set "projectdirectory=%~dp0."
+set "PythonExe=%LocalAppData%\Programs\Python\Python314\python.exe"
+if not exist "%PythonExe%" set "PythonExe=python.exe"
+set "projectassets=%projectdirectory%\Assets"
+set "projectfavicon=%projectassets%\img\favicon.ico"
+set "mainprojectfile=%projectdirectory%\Windows Install Hub.py"
+set "distdirectory=%projectdirectory%\dist"
+set "builddirectory=%projectdirectory%\build"
+set "outputdirectory=%projectdirectory%\Project-Build"
+if exist "%distdirectory%" rd /s /q "%distdirectory%"
+if exist "%builddirectory%" rd /s /q "%builddirectory%"
+if exist "%projectdirectory%\%NameApp%.spec" del /f /q "%projectdirectory%\%NameApp%.spec"
+"%PythonExe%" -m PyInstaller --noconfirm --clean --onefile --windowed --icon "%projectfavicon%" --name "%NameApp%" --uac-admin --distpath "%distdirectory%" --workpath "%builddirectory%" --specpath "%projectdirectory%" --add-data "%projectassets%\Python-Modules.txt;Source/" --add-data "%projectassets%\rarreg.key;Source/" --add-data "%projectassets%\img\winrar.ico;Source/" --hidden-import "json" --hidden-import "customtkinter" --hidden-import "requests" --hidden-import "datetime" --hidden-import "os" --hidden-import "sys" --hidden-import "ctypes" --hidden-import "threading" --hidden-import "subprocess" --hidden-import "shutil" --hidden-import "time" --hidden-import "zipfile" --hidden-import "re" "%mainprojectfile%"
+if errorlevel 1 exit /b %errorlevel%
+if exist "%outputdirectory%" rd /s /q "%outputdirectory%"
+mkdir "%outputdirectory%"
+copy /y "%distdirectory%\%NameApp%.exe" "%projectdirectory%\%NameApp%.exe"
+copy /y "%distdirectory%\%NameApp%.exe" "%outputdirectory%\%NameApp%.exe"
+if exist "%projectdirectory%\%NameApp%.spec" del /f /q "%projectdirectory%\%NameApp%.spec"
+if exist "%builddirectory%" rd /s /q "%builddirectory%"
+if exist "%distdirectory%" rd /s /q "%distdirectory%"
+endlocal
